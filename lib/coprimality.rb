@@ -1,6 +1,6 @@
 # This method takes two integers, m and n, and determines whether those integers are co-prime
 require 'pry'
-#def determine_coprimality(m, n)
+def determine_coprimality(m, n)
   def prime_factors (number)
     factors_array = Array.new
     i=1
@@ -27,5 +27,9 @@ require 'pry'
     end
   factors_prime
   end
+
+  array1 = prime_factors (m)
+  array2 = prime_factors (n)
+  
   binding.pry
-#end
+end
