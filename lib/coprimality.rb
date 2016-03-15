@@ -28,8 +28,25 @@ def determine_coprimality(m, n)
   factors_prime
   end
 
+  if m == 0 || m == 1
+    return false
+  end
+  if n == 0 || m == 1
+    return false
+  end
+  
   array1 = prime_factors (m)
   array2 = prime_factors (n)
-  
-  binding.pry
+  i = 0
+  array1.each do |m_factors|
+    array2.each do |n_factors|
+      if m_factors == n_factors
+        i += 1
+      end
+    end
+  end
+  if i == 0
+    return true
+  end
+  false
 end
