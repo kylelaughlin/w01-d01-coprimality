@@ -12,21 +12,20 @@ require 'pry'
     end
     #factors_array
     factors_prime = Array.new
-    factors_array.each do |x|
-      if x > 2
-        i = 2
-        prime = 0
-        while i <= Math.sqrt(x) do
-          if x % i == 0
-            prime += 1
+    factors_array.each do |factor|
+      if factor > 2
+          prime = 0
+          (2..Math.sqrt(factor)).each do |x|
+              if factor % x == 0
+                  prime += 1
+              end
           end
-        end
-        if prime == 0
-          factors_prime << x
-        end
+      end
+      if prime == 0
+          factors_prime << factor
       end
     end
-    factors_prime
+  factors_prime
   end
   binding.pry
 #end
