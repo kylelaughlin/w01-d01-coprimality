@@ -1,5 +1,4 @@
 # This method takes two integers, m and n, and determines whether those integers are co-prime
-require 'pry'
 def determine_coprimality(m, n)
   #method to find all prime factors
   def prime_factors (number)
