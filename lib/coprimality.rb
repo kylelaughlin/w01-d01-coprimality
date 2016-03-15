@@ -1,6 +1,7 @@
 # This method takes two integers, m and n, and determines whether those integers are co-prime
 require 'pry'
 def determine_coprimality(m, n)
+  #method to find all prime factors
   def prime_factors (number)
     factors_array = Array.new
     i=1
@@ -34,9 +35,15 @@ def determine_coprimality(m, n)
   if n == 0 || m == 1
     return false
   end
-  
+  if m == n
+    return false
+  end
+
+  #establish arrays of each number's prime factors
   array1 = prime_factors (m)
   array2 = prime_factors (n)
+
+  #compare each factor
   i = 0
   array1.each do |m_factors|
     array2.each do |n_factors|
