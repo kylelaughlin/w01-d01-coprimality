@@ -29,6 +29,7 @@ def determine_coprimality(m, n)
   factors_prime
   end
 
+  #initial checks when 0, 1 or the same
   if m == 0 || m == 1
     return false
   end
