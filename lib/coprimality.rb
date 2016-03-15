@@ -11,7 +11,6 @@ def determine_coprimality(m, n)
       end
       i += 1
     end
-    #factors_array
     factors_prime = Array.new
     factors_array.each do |factor|
       if factor > 2
